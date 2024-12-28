@@ -19,7 +19,7 @@ export const Footer = () => {
               {SiteConfig.title}
             </Typography>
           </div>
-          <div className="flex flex-col items-end gap-2 text-sm text-muted-foreground">
+          <div className="flex flex-row items-end gap-2 text-sm text-muted-foreground">
             <Link className="hover:underline" href="/legal/privacy">
               Privacy
             </Link>

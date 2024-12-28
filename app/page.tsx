@@ -5,7 +5,7 @@ export default function Home() {
     <div>
       <Card>
         <CardHeader>
-          <CardTitle>Test card</CardTitle>
+          <CardTitle className='text-center'>Test card</CardTitle>
         </CardHeader>
       </Card>
     </div>

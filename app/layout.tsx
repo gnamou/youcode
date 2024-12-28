@@ -8,6 +8,8 @@ import { Inter } from 'next/font/google';
 import { PropsWithChildren } from 'react';
 import { Providers } from './Providers';
 import './globals.css';
+import { getServerSession } from 'next-auth';
+import { authOptions } from '../pages/api/auth/[...nextauth]';
 
 const fontSans = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -16,7 +18,10 @@ export const metadata: Metadata = {
   description: SiteConfig.description,
 };
 
-export default function RootLayout({ children }: PropsWithChildren) {
+export default async function RootLayout({ children }: PropsWithChildren) {
+
+  const session = await getServerSession(authOptions)
+  
   return (
     <>
       <html lang="en" className="h-full" suppressHydrationWarning>
